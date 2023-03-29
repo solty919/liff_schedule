@@ -19,6 +19,7 @@ export const HomeContent = ({}: HomePageProps) => {
 
   return (
     <div>
+      <p>ここがホーム</p>
       {profile?.displayName}
       {JSON.stringify(profile)}
     </div>

@@ -1,8 +1,6 @@
 import { LiffProvider } from '@/hooks/useLiff';
 import { NextPage } from 'next';
 import type { AppProps } from 'next/app';
-import { mock } from 'node:test';
-import { useEffect } from 'react';
 
 const MyApp: NextPage<AppProps> = ({
   Component,

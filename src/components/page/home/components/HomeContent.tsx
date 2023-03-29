@@ -1,11 +1,10 @@
 import { HomePageProps } from '@/components/page/home/hooks/useHomePageHook';
-import { useLiff } from '@/hooks/useLiff';
+import { Profile, useLiff } from '@/hooks/useLiff';
 import { useEffect, useState } from 'react';
-import { Liff } from '@line/liff/';
 
 export const HomeContent = ({}: HomePageProps) => {
   const { liff } = useLiff();
-  const [profile, setProfile] = useState<any>();
+  const [profile, setProfile] = useState<Profile>();
 
   useEffect(() => {
     if (!liff) return;
@@ -18,5 +17,10 @@ export const HomeContent = ({}: HomePageProps) => {
     });
   });
 
-  return <div>v1 aa{profile}</div>;
+  return (
+    <div>
+      {profile?.displayName}
+      {JSON.stringify(profile)}
+    </div>
+  );
 };

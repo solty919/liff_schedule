@@ -14,6 +14,13 @@ const LiffContext = createContext<{
   liff?: Liff;
 }>({});
 
+export type Profile = {
+  userId: string;
+  displayName: string;
+  pictureUrl?: string;
+  statusMessage?: string;
+};
+
 export const useLiff = () => useContext(LiffContext);
 
 export const LiffProvider: FC<
